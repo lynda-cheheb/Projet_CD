@@ -23,8 +23,7 @@ Vagrant.configure("2") do |config|
   # within the machine from a port on the host machine. In the example below,
   # accessing "localhost:8080" will access port 80 on the guest machine.
   # NOTE: This will enable public access to the opened port
-  config.vm.network "forwarded_port", guest: 8080, host: 8080
-  config.vm.network "forwarded_port", guest: 22, host: 2222
+  config.vm.network "forwarded_port", guest: 22, host: 2224
 
 
   # Create a forwarded port mapping which allows access to a specific port
@@ -56,7 +55,7 @@ Vagrant.configure("2") do |config|
   #   vb.gui = true
   #
   #   # Customize the amount of memory on the VM:
-    vb.memory = "4096"
+    vb.memory = "2048"
   end
   #
   # View the documentation for the provider you are using for more
@@ -65,14 +64,14 @@ Vagrant.configure("2") do |config|
   # Enable provisioning with a shell script. Additional provisioners such as
   # Puppet, Chef, Ansible, Salt, and Docker are also available. Please see the
   # documentation for more information about their specific syntax and use.
-  config.vm.provision "shell", inline: <<-SHELL
-    yum update
+  # config.vm.provision "shell", inline: <<-SHELL
+    # yum update
 
     #installation d'ansible
-	  yum -y install epel-release
-      yum -y install python-pip
-      pip install ansible
-      ansible --version
+	  # yum -y install epel-release
+      # yum -y install python-pip
+      # pip install ansible
+      # ansible --version
 
     # installation des outils tree et net-tools
       # yum -y install tree
@@ -80,15 +79,15 @@ Vagrant.configure("2") do |config|
       # ansible-playbook /vagrant_data/ansible/ansible_tp-master/test.yml
     
     # installation de git2.16
-      yum install -y https://centos7.iuscommunity.org/ius-release.rpm
-      yum install -y git2u-all
+      # yum install -y https://centos7.iuscommunity.org/ius-release.rpm
+      # yum install -y git2u-all
 
     # installation de docker
       # yum install -y yum-utils device-mapper-persistent-data lvm2
       # yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo
       # yum install -y docker-ce
-	    # systemctl enable docker
-	    # systemctl start docker
+	  # systemctl enable docker
+	  # systemctl start docker
       # usermod -aG docker vagrant
 
 	  # installation de docker-compose
@@ -96,8 +95,8 @@ Vagrant.configure("2") do |config|
       # chmod +x /usr/bin/docker-compose
 
     # installation de kubectl
-	    # curl -LO https://storage.googleapis.com/kubernetes-release/release/$(curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt)/bin/linux/amd64/kubectl
-	    # chmod +x ./kubectl
+	  # curl -LO https://storage.googleapis.com/kubernetes-release/release/$(curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt)/bin/linux/amd64/kubectl
+	  # chmod +x ./kubectl
       # mv ./kubectl /usr/bin/kubectl
 
     # installation de java12
@@ -126,5 +125,5 @@ Vagrant.configure("2") do |config|
       # systemctl start jenkins.service
       # systemctl status jenkins.service
       # systemctl enable jenkins.service
-  SHELL
+  # SHELL
 end

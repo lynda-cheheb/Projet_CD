@@ -1,6 +1,9 @@
-node ansible_port= ansible_host=
-test_server ansible_port= ansible_host=
-app_server ansible_port= ansible_host=
+node 192.168.1.44 ansible_port=22 ansible_host=2223
+test_server 192.168.1.44 ansible_port=22 ansible_host=2224
+app_server 192.168.1.44 ansible_port=22 ansible_host=2225
 
-[vagrant]
+[slave]
+node
+test_server
+app_server
 
