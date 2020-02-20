@@ -18,9 +18,27 @@ node ('Noeud_Jenkins') {
       
     stage ('Building') {
          
-              dockerImage = docker.build registry + ":1.0"
+         dockerImage = docker.build registry + ":1.0"
   }
   
    
 
+         
+         
+         
+         
+         
+         
+         
+         
+         
+    stage ('DeployImage') {
+     
+              docker.withRegistry('',registryCredential){
+                  dockerImage.push()           
+              }
+        
+    stage ('PullImage') {
+              docker.withRegistry(''){
+                  dockerImage.pull()
 }
