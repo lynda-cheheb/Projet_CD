@@ -1,0 +1,6 @@
+node ansible_port= ansible_host=
+test_server ansible_port= ansible_host=
+app_server ansible_port= ansible_host=
+
+[vagrant]
+

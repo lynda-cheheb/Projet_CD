@@ -1,0 +1,10 @@
+---
+- hosts: localhost
+  become: yes
+  roles: 
+   - GIT
+   - JENKINS
+   - JAVA12
+   - MAVEN
+   - TOMCAT
+   - APACHE
