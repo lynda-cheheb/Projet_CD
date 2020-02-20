@@ -8,7 +8,7 @@ node ('Noeud_Jenkins') {
     stage ('CloningGit'){
           
           git url: 'https://gitlab.com/RaphaeldeGail/devopsapp.git',
-               branch: 'master',
+               branch: 'master'
       }
       
     stage ('Building') {
