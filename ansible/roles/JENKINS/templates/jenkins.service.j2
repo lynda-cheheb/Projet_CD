@@ -5,7 +5,7 @@ After=network.target
 [Service]
 Type=simple
 Environment="JENKINS_HOME=/data/jenkins"
-E:xecStart=/usr/bin/java -jar /usr/lib/jenkins/jenkins.war —-httpPort={{ jenkins_port }}
+ExecStart=/usr/bin/java -jar /usr/lib/jenkins/jenkins.war —-httpPort={{ jenkins_port }}
 User=jenkins
 
 [Install]
