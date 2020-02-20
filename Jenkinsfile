@@ -9,9 +9,24 @@ node ('Noeud_Jenkins') {
           
           git url: 'https://gitlab.com/RaphaeldeGail/devopsapp.git',
                branch: 'master'
-      }
+     }
+    
+    stage ('Build') {
+          
+         sh 'maven clean package'
+         
+          
+    
       
-    stage ('Building') {
+   
+     
+     
+     
+     
+     
+     
+     
+     stage ('Building') {
          
               dockerImage = docker.build registry + ":1.0"
   }
