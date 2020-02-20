@@ -11,22 +11,12 @@ node ('Noeud_Jenkins') {
                branch: 'master'
      }
     
-    stage ('Build') {
+    stage ('Build_with_Maven') {
           
          sh 'maven clean package'
          
-          
-    
       
-   
-     
-     
-     
-     
-     
-     
-     
-     stage ('Building') {
+    stage ('Building') {
          
               dockerImage = docker.build registry + ":1.0"
   }
