@@ -2,8 +2,7 @@ node 192.168.1.44 ansible_port=22 ansible_host=2223
 test_server 192.168.1.44 ansible_port=22 ansible_host=2224
 app_server 192.168.1.44 ansible_port=22 ansible_host=2225
 
-[slave]
-node
+[server]
 test_server
 app_server
 

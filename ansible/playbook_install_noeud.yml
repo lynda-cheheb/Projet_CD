@@ -1,5 +1,5 @@
 ---
-- hosts: slave
+- hosts: server
   become: yes
   roles:
    - DOCKER
