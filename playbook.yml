@@ -17,3 +17,4 @@
        image: "{{ image }}"
        ports: '8081:8080'
        state: started
+       command: java -jar /usr/bin/devops-1.0.war
