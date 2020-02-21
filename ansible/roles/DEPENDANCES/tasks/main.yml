@@ -1,5 +1,5 @@
 ---
-# tasks file for ANSIBLE
+# tasks file for DEPENDANCES
 - name: 
   yum:
     name: epel-release
@@ -12,5 +12,5 @@
   pip:
     name: ansible
 - name:
-  pip: docker-py
-        
+  pip:
+    name: docker-py

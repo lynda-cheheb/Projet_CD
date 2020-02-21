@@ -4,3 +4,4 @@
   roles:
    - DOCKER
    - GIT
+   - DEPENDANCES
