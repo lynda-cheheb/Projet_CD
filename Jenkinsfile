@@ -17,7 +17,7 @@ node('Noeud_Jenkins'){
         sh 'mvn clean package'
         
     }
-     stage('MasterBuild - Publish test results') {
+     stage('Publish test results') {
         junit 'target/surefire-reports/*.xml'
     }
 
