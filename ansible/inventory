@@ -6,3 +6,6 @@ app_server 192.168.1.44 ansible_port=22 ansible_host=2225
 test_server
 app_server
 
+[node]
+node
+
