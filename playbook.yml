@@ -15,3 +15,4 @@
       docker_container:
        name: test_app
        image: mounabal/image_test:version-48
+       ports: '8081:8080'
