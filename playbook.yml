@@ -1,6 +1,16 @@
 ---
 - hosts: test_server
   tasks:
+    - name: install epel-release
+      yum:
+       name: epel-release
+       state: present
+
+    - name: install pip
+      yum:
+       name: python-pip
+       state: present
+
     - name: creation du conteneur
       docker_container:
         name: test_app
