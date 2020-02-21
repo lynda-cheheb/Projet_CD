@@ -14,5 +14,5 @@
     - name: creation du conteneur
       docker_container:
        name: test_app
-       image: mounabal/image_test:version-53
+       image: "{{ image }}"
        ports: '8081:8080'
