@@ -14,4 +14,4 @@
     - name: creation du conteneur
       docker_container:
        name: test_app
-       image: mounabal/image_test
+       image: mounabal/image_test:version-48
