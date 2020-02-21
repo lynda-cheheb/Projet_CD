@@ -1,10 +1,6 @@
 ---
-- hosts: node
+- hosts: server
   become: yes
   roles:
    - DOCKER
    - GIT
-   - MAVEN
-   - ANSIBLE
-   - JAVA8
-
