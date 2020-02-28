@@ -1,1 +1,1 @@
-server_docker ansible_host=52.252.128.87 ansible_port=22 ansible_user="vagrant"
+server_docker ansible_host=52.252.128.87 ansible_port=22 ansible_user=vagrant
